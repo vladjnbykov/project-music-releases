@@ -6,7 +6,11 @@ Since the focus of this assignment is to practice with React, we've downloaded a
 
 You should build something which looks like this:
 
-[todo]
+![Main design](https://i.imgur.com/CZyMdDz.png)
+
+When hovering over album covers or artist names, you should implement the following hover styles:
+
+![Hover styles](https://i.imgur.com/vKiV2XU.png)
 
 ## What you will learn 🧠
 
