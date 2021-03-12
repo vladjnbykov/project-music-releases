@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 10px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -10,4 +11,100 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+.album {
+  width: 100%;
+}
+
+.cover-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.cover-wrapper:hover .icons {
+  display: flex;
+  
+}
+
+.cover {
+  width: 100%;
+}
+
+.cover-wrapper:hover {
+  filter: brightness(50%);
+}
+
+.icons {
+  position: absolute;
+  bottom:40%; 
+  display: none;
+  justify-content: space-around;
+}
+
+.icon {
+  width: 20%;
+  filter: invert(54%) sepia(50%) saturate(1301%) hue-rotate(133deg) brightness(503%) contrast(116%);
+}
+
+
+.play { 
+  transition: all .2s ease-in-out; 
+}
+
+.play:hover { 
+  transform: scale(1.4); 
+}
+
+.underline:hover {
+  text-decoration: underline;
+}
+
+.artist-container {
+  display: inline;
+}
+
+.artist-container:last-child::before {
+  content: " & ";
+  color: #a0a0a0;
+}
+
+.artist-container:not(:first-child, :last-child)::before {
+  color: #a0a0a0;
+  content: ", ";
+}
+
+.artist-container:only-child::before { content: ""; }
+
+
+@media(min-width: 768px) {
+  .album {
+    width: 45%;
+  }
+}
+
+
+@media(min-width: 992px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+  
+  }
+  
+  .album {
+    width: 100%;
+  }
 }

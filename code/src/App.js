@@ -1,12 +1,21 @@
+/* eslint-disable linebreak-style */
 import React from 'react'
 import data from './data.json'
+import Album from "./components/Album"
 
-console.log(data)
+const App = () => {
 
-export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+
+    <>
+      <h1>New Albums and singles</h1>
+      <div className="container">
+        {data.albums.items.map((item) => (
+          <Album key={item.id} albumContent={item} />
+        ))}
+      </div>
+    </>
   )
 }
+
+export default App;
